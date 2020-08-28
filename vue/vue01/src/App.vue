@@ -1,14 +1,15 @@
 <template>
   <div id="app">
     <!-- <FormTest></FormTest> -->
-    <HelloWorld msg="Welcome to Your Vue.js App" ref="hw" @foo="onFoo($event)" />
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App" ref="hw" @foo="onFoo($event)" /> -->
+    <!-- <HelloWorld1 /> -->
     <!-- <HelloWorld> -->
       <!-- 默认插槽用default做参数 -->
       <!-- <template v-slot:default>abcdefg</template> -->
       <!-- 具名插槽用插槽名做参数 -->
       <!-- <template v-slot:content="{bla,bar}">{{bla}}{{bar}}</template> -->
     <!-- </HelloWorld> -->
-    <!-- <CompCommunicate /> -->
+    <CompCommunicate />
     <!-- <SlotsTest></SlotsTest> -->
     <!-- <Recursion></Recursion> -->
   </div>
@@ -16,10 +17,11 @@
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
+import HelloWorld1 from "./components/HelloWorld1.vue";
 import CompCommunicate from "./components/communicate";
 import SlotsTest from "./components/slots";
 import Recursion from "./components/recursion";
-import FormTest from './components/form'
+import FormTest from './components/form';
 
 export default {
   name: "app",
@@ -33,6 +35,7 @@ export default {
   },
   components: {
     HelloWorld,
+    HelloWorld1,
     CompCommunicate,
     SlotsTest,
     Recursion,
@@ -51,6 +54,7 @@ export default {
     onFoo(e) {
       console.log("onFoo");
       console.log(e);
+      this.bla = e;
     }
   }
 };

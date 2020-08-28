@@ -1,5 +1,5 @@
 <template>
-  <div class="hello" @click="$parent.$emit('mua')">
+  <div class="hello" @click="handleClick()">
     <h1 @click="$emit('foo', 'bar')">{{ msg }}</h1>
     {{foo}} - {{dong.bla}}
 
@@ -21,14 +21,21 @@ export default {
   },
   data() {
     return {
-      foo: "foo"
+      foo: "123"
     };
   },
   created() {
-    this.$parent.$on("mua", () => {
-      console.log("mua");
-    });
-  }
+    // this.$parent.$on("mua", () => {
+    //   console.log("mua");
+    // });
+  },
+  methods: {
+    handleClick() {
+      this.$parent.$emit('mua', '哈哈哈哈')
+      console.log("执行了");
+      this.$bus.$emit('transData', '传值给你');
+    }
+  },
 };
 </script>
 

@@ -35,9 +35,10 @@ export default {
     this.$on("dispatch", msg => {
       this.msg = "接收dispatch消息:" + msg;
     });
-            this.$bus.$on("event-bus",msg=>{
-            this.msg = '接收event-bus消息:'+ msg
-        })
+
+    this.$bus.$on("event-bus",msg => {
+      this.msg = '接收event-bus消息:'+ msg
+    });
   }
 };
 </script>
