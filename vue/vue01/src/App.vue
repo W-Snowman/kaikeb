@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <!-- <FormTest></FormTest> -->
+    <!-- <MyForm></MyForm> -->
+    <p-form></p-form>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" ref="hw" @foo="onFoo($event)" /> -->
     <!-- <HelloWorld1 /> -->
     <!-- <HelloWorld> -->
@@ -9,7 +11,7 @@
       <!-- 具名插槽用插槽名做参数 -->
       <!-- <template v-slot:content="{bla,bar}">{{bla}}{{bar}}</template> -->
     <!-- </HelloWorld> -->
-    <CompCommunicate />
+    <!-- <CompCommunicate /> -->
     <!-- <SlotsTest></SlotsTest> -->
     <!-- <Recursion></Recursion> -->
   </div>
@@ -22,6 +24,8 @@ import CompCommunicate from "./components/communicate";
 import SlotsTest from "./components/slots";
 import Recursion from "./components/recursion";
 import FormTest from './components/form';
+import MyForm from '@/components/myform';
+import PForm from '@/components/PForm';
 
 export default {
   name: "app",
@@ -39,7 +43,9 @@ export default {
     CompCommunicate,
     SlotsTest,
     Recursion,
-    FormTest
+    FormTest,
+    MyForm,
+    PForm
   },
   created() {
     // 父组件先于子组件创建

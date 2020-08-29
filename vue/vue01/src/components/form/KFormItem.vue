@@ -35,7 +35,7 @@ export default {
       // 执行组件校验
       // 1.获取校验规则
       const rules = this.form.rules[this.prop];
-
+      console.log(this.prop);
       // 2.获取数据
       const value = this.form.model[this.prop];
 
